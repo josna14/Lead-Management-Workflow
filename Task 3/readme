@@ -1,1 +1,64 @@
+Task 3: Scaling and Advanced Implementation
 
+1. Lead Form (Google Forms)
+   Collects user responses through a Google Form.
+2. Formatter by Zapier: Time zone
+   Ensures the form submission timestamps are properly formatted or converted to the correct time zone for consistency.
+3. Paths: Form Validation
+   Splits the flow into two paths:
+   
+   Validated Form: For forms that meet the required validation criteria.
+    Incomplete Form: For forms that fail validation.
+    When the form is incomplete it will send the error notification the applicant via Gmail.
+
+4. Validated Form: Path Conditions
+   Checks whether the form is filled correctly.
+
+5. Code by Zapier: Run JavaScript
+   Runs the Java Script code for calculating the Lead Score.
+
+6. Google Sheets: Lead Data Unfiltered
+    Stores the raw, unfiltered lead data in a Google Sheet for record-keeping or further analysis.
+
+7. Paths: Split into Paths
+   Splits the leads into two categories based on additional filtering criteria:
+Filtered Leads
+Nurturing Campaigns
+
+Filtered Leads Path
+1.Path Conditions: Filtered Leads
+  Filters leads further, such as checking if a lead score exceeds a threshold (Greater than [69]).
+
+2.Formatter by Zapier: Sales Team Assigning
+  Processes the filtered lead data to assign them to appropriate sales team members.
+
+3.Formatter by Zapier: Pattern Match
+  Performs pattern matching on comments or other fields to extract keywords and gives output as lead priority.
+
+4.Google Sheets: Filtered Lead
+  Stores the filtered leads in a separate Google Sheet for tracking.
+
+5.Gmail: Welcome Email
+  Sends a personalized welcome email to the filtered leads, acknowledging their submission.
+
+6.Higher lead Filter
+  Filter the lead which is greater than 90.
+
+7.Email Notification
+  When the higher lead is present, it will automatically send the high priority notification the Sales team.
+
+8.Splitting into two Paths for sending the Google Reminder
+
+9.High Priority
+  When the lead is higher and lead priority is true the it will send the google reminder to the sales manager with one or two days.
+
+10.Medium Priority
+   When the lead is higher then 70 and lesser than 90 and lead priority is false then the reminder will send after two – three days.
+   Nurturing Campaigns
+  When the lead score is lesser than 70 and it directed to nurturing campaigns.
+A separate google sheet will stores and handles the lead
+
+Limitations:
+   Some Time zones are not able to convert to local time.
+   Assigning the sales team in random manner leads to overload certain member.
+   All these workflows depend on static rules and which may ineffective.
