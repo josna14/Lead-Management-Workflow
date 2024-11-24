@@ -1,1 +1,42 @@
+Explanation:
+1. Lead Form (Google Forms)
+   Collects user responses through a Google form.
 
+2. Formatter by Zapier: Time zone
+  Ensures the form submission timestamps are properly formatted or converted to the correct time zone for consistency.
+
+3. Paths: Form Validation
+   Splits the flow into two paths:
+   Validated Form: For forms that meet the required validation criteria.
+   Incomplete Form: For forms that fail validation.
+
+4. Validated Form: Path Conditions
+   Checks the conditions to ensure the form data is valid and meets specified criteria for further processing.
+
+5. Code by Zapier: Run JavaScript
+   Running JavaScript code to Calculate Lead Score
+
+6. Google Sheets: Lead Data Unfiltered
+   Stores the raw, unfiltered lead data in a Google Sheet for record-keeping or further analysis.
+
+7. Paths: Split Into Paths
+   Splits the leads into two categories based on additional filtering criteria:
+   Filtered Leads
+   Nurturing Campaigns
+
+Filtered Leads Path
+
+    1. Path Conditions: Filtered Leads
+    Filters leads further, such as checking if a specific column value (e.g., score or amount) exceeds a threshold (Greater than [69]).
+
+    2. Formatter by Zapier: Sales Team Assigning
+    Processes the filtered lead data to assign them to appropriate sales team members.
+
+    3. Formatter by Zapier: Pattern Match
+    Performs pattern matching on comments or other fields to extract keywords.
+
+    4. Google Sheets: Filtered Lead
+    Stores the filtered leads in a separate Google Sheet
+  
+    5. Gmail: Welcome Email
+    Sends a personalized welcome email to the filtered leads, acknowledging their submission.
