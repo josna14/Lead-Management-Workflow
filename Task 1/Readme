@@ -10,14 +10,14 @@ Running the JavaScript code to calculate the lead score.
 Saves the raw o data into a Google Sheet for initial storage and backup.
 Path A:
 Filter by Zapier: Filter Conditions
-Checks the lead score is greater than 70
+           Checks the lead score is greater than 70
 Google Sheets: Create Spreadsheet Row
-Saves filtered data into another Google Sheet
+           Saves filtered data into another Google Sheet
 Gmail: Send Email
-Send the welcome mail to the responder whose lead score is greater than 70.
+          Send the welcome mail to the responder whose lead score is greater than 70.
 
 Path B:
 Filter by Zapier: Filter Conditions
-Checks the lead score lesser than 70.
+         Checks the lead score lesser than 70.
 Google Sheets: Create Spreadsheet Row
-Saves the data in to the nurturing campaigns google sheet.
+        Saves the data in to the nurturing campaigns google sheet.
